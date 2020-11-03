@@ -1,0 +1,9 @@
+<div id="news-container" class="grid">
+  <div class="xs-100 md-50 lg-33" *ngFor="let item of items">
+    <h2>{{item.title}}</h2>
+    <p>{{item.description}}</p>
+    <img *ngIf="item.urlToImage" src="{{urlToImage}}" alt="" style="max-width: 100%">
+    <br>
+    <button class="secondary" onclick="window.location.href='{{item.url}}'">View details</button>
+  </div>
+</div>

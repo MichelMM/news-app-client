@@ -1,0 +1,21 @@
+$tema: ".pink_party";
+$primary-color: #2C0703;
+$secondary-color: #890620;
+$tertiary-color:  #B6465F;
+$default-color: white;
+$backgorund-color: #EBD4CB;
+
+$text-primary-color: #DA9F93 ;
+$text-secondary-color:  #2C0703;
+$text-highlight-color: #DA9F93;
+
+@include buttons_func($tema,$default-color, $text-primary-color);
+@include buttons_func($tema,$primary-color, $text-primary-color, "primary");
+@include buttons_func($tema,$secondary-color, $text-secondary-color, "secondary");
+@include buttons_func($tema,$tertiary-color, $text-highlight-color, "tertiary");
+
+@include hero_func($tema,$backgorund-color, $text-secondary-color);
+@include div_class_func($tema,$tertiary-color, $default-color,"sidenav");
+@include div_class_func($tema,$tertiary-color, $text-primary-color,"xs-100");
+@include div_class_func($tema,$backgorund-color, $text-primary-color,"main-container");
+@include text_func($tema, $text-primary-color,"sidenav ul li");

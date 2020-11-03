@@ -1,0 +1,77 @@
+%button {
+    padding: 4px 10px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+%hero {
+    border-radius: 5px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+@mixin buttons_func($tema, $bg, $text, $classname:"default") {
+    @if $classname=="default" {
+        #{$tema} button {
+            border-radius: 2px;
+            cursor: pointer;
+            padding: 4px 10px;
+            background-color: $bg;
+            color: $text;
+        }
+    }
+
+    @else {
+        #{$tema} button.#{$classname} {
+            border-radius: 2px;
+            cursor: pointer;
+            padding: 4px 10px;
+            background-color: $bg;
+            color: $text;
+        }
+    }
+}
+
+@mixin hero_func($tema, $bg, $text, $classname:"default") {
+    @if $classname=="default" {
+        #{$tema} .hero {
+            @extend %hero;
+            background-color: $bg;
+            color: $text;
+        }
+    }
+
+    @else {
+        #{$tema} .#{$classname} {
+            border-radius: 2px;
+            padding: 10px;
+            box-sizing: border-box;
+            background-color: $bg;
+            color: $text;
+        }
+    }
+}
+
+@mixin div_class_func($tema, $bg, $text, $classname:"default") {
+    #{$tema} .#{$classname} {
+        border-radius: 2px;
+        padding: 10px;
+        box-sizing: border-box;
+        background-color: $bg;
+        color: $text;
+    }
+}
+
+
+@mixin text_func($tema, $text, $classname:"default") {
+    #{$tema} .#{$classname} {
+        color: $text;
+    }
+}
+
+@import "default";
+@import "not_dark_yet";
+@import "lemon_curry";
+@import "pink_party";
