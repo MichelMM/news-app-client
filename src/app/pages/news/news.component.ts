@@ -16,21 +16,9 @@ export class NewsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getHeadlines(this.country);
+
   }
 
-  onCountryChange() {
-    this.getHeadlines(this.country);
-  }
-
-
-  getHeadlines(country) {
-    this.newsService.getTopHeadlines(country).then(data => {
-      this.headlines = data;
-    }).catch(err => {
-      console.log(err);
-    });
-  }
 
   ngOnChanges() { }
 

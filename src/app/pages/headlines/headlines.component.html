@@ -1,1 +1,9 @@
-<p>headlines works!</p>
+<select name="" [(ngModel)]="country" (change)="onCountryChange()">
+    <option value="">Selecciona un pais</option>
+    <option value="mx">México</option>
+    <option value="us">USA</option>
+  </select>
+
+  
+  
+  <app-grid [items]="headlines"></app-grid>
