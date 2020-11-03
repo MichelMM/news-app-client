@@ -6,8 +6,9 @@ import { Page404Component } from './pages/page404/page404.component';
 import { HeadlinesComponent} from './pages/headlines/headlines.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'noticias', pathMatch: 'full' },
-  { path: 'noticias', component: HeadlinesComponent },
+  { path: '', redirectTo: 'titulares', pathMatch: 'full' },
+  { path: 'titulares', component: HeadlinesComponent },
+  { path: 'noticias', component: NewsComponent },
   { path: '**', component: Page404Component}
 ];
 

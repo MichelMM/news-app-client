@@ -10,11 +10,15 @@ export class NewsService {
   constructor(private http:HttpClient) { }
 
 
-  getNews(e):Promise<any> {
-    return this.http.get('http://localhost:3000/api/Everything?'+e).toPromise();
+  getNews(e,source?):Promise<any> {
+    return this.http.get('http://localhost:3000/api/Everything?q='+e+'&sources='+source).toPromise();
   }
 
   getTopHeadlines(country):Promise<any> {
     return this.http.get('http://localhost:3000/api/Top-Headlines/'+country).toPromise();
+  }
+
+  getSources():Promise<any>{
+    return this.http.get('http://localhost:3000/api/Sources').toPromise();
   }
 }

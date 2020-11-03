@@ -1,0 +1,13 @@
+
+
+<form (submit)="searchNews()">
+    <select name="source" [(ngModel)]="source">
+        <option value="">No specific source</option>
+        <option *ngFor="let item of sources" value="{{item.id}}">{{item.name}}</option>
+      </select>
+    <input name="buscar" type="text" [(ngModel)]="search" placeholder="Search News">
+    <button>Search</button>
+</form>
+
+
+<app-grid [items]="news"></app-grid>
