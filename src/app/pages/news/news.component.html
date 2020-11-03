@@ -1,12 +1,12 @@
-<h2>{{title}}</h2>
 
-<select name="" [(ngmodel)]="country" (change)="onCountryChange($event">
+
+<select name="" [(ngModel)]="country" (change)="onCountryChange()">
   <option value="">Selecciona un pais</option>
   <option value="mx">México</option>
-  <option value="us"></option>
+  <option value="us">USA</option>
 </select>
 
-<app-grid></app-grid>
+<app-grid [items]="headlines"></app-grid>
 
 <!-- 
     arreglo.foreach(noticia => {

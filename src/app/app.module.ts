@@ -9,6 +9,7 @@ import { NewsComponent } from './pages/news/news.component';
 import { CommentsComponent } from './pages/comments/comments.component';
 import { Page404Component } from './pages/page404/page404.component';
 import { GridComponent } from './globals/grid/grid.component';
+import { HeadlinesComponent } from './pages/headlines/headlines.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { GridComponent } from './globals/grid/grid.component';
     NewsComponent,
     CommentsComponent,
     Page404Component,
-    GridComponent
+    GridComponent,
+    HeadlinesComponent
     
   ], 
   imports: [

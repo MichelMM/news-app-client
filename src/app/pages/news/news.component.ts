@@ -8,22 +8,25 @@ import { NewsService } from './../../globals/services/news.service';
   styleUrls: ['./news.component.scss']
 })
 export class NewsComponent implements OnInit {
+  headlines: any[] = [];
+  country: string = 'mx';
 
-  title: string = "News Component";
-
-  news: any[] = [];
 
   constructor(private newsService: NewsService) {
   }
 
   ngOnInit(): void {
+    this.getHeadlines(this.country);
+  }
+
+  onCountryChange() {
+    this.getHeadlines(this.country);
   }
 
 
-  getHeadlines(e) {
-    this.newsService.getNews(e).then(data => {
-      this.news = data;
-      console.log(data);
+  getHeadlines(country) {
+    this.newsService.getTopHeadlines(country).then(data => {
+      this.headlines = data;
     }).catch(err => {
       console.log(err);
     });
